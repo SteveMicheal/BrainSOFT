@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrainSOFT - SEO Services In Lahore</title>
     <meta name="description" content="Get transparent, white-hat SEO services in Lahore. Rank on Google Page 1 with BrainSOFT, a division of Brain Telecommunication Ltd.">
+        <meta name="google-site-verification" content="SyuKB4FKCwj1XOsaCcjnou0qsB_F4OUqPJMXBz1ObMM" />
+    <link rel="canonical" id="canonical-link">
     <style>
         /* CSS Reset & Variables */
         :root {
@@ -627,7 +629,6 @@
                 <a href="#pricing">Pricing</a>
                 <a href="#guarantees">Guarantees</a>
                 <a href="#contact" class="btn btn-outline" style="padding: 0.5rem 1.2rem;">Get Started</a>
-                <meta name="google-site-verification" content="SyuKB4FKCwj1XOsaCcjnou0qsB_F4OUqPJMXBz1ObMM" />
             </nav>
         </div>
     </header>
@@ -927,6 +928,13 @@
             alert(`Thank you, ${name}! Your request for our ${selectedPackage} plan has been received. Our Lahore-based SEO analysts will email you back within 2 business hours.`);
             form.reset();
         });
+    
+        // Dynamic canonical
+        (function(){
+          var l=document.getElementById('canonical-link');
+          if(l){l.href=window.location.origin+window.location.pathname;}
+        })();
+
     </script>
 </body>
 </html>
