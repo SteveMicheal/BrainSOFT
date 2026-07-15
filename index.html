@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominating Lahore’s Local Search | BrainSOFT SEO</title>
+    <meta name="description" content="Get transparent, white-hat SEO services in Lahore. Rank on Google Page 1 with BrainSOFT, a division of Brain Telecommunication Ltd.">
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --color-white: #FFFFFF;
+            --color-lavender: #A5A0C0;
+            --color-purple-dark: #312353;
+            --color-purple-light: #443273;
+            --color-bg-light: #F9F9FB;
+            --font-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 10px 30px rgba(49, 35, 83, 0.05);
+            --shadow-hover: 0 20px 40px rgba(49, 35, 83, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-white);
+            color: var(--color-purple-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Utility Components */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--color-purple-dark);
+            color: var(--color-white);
+            padding: 0.875rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--color-purple-dark);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--color-white);
+            color: var(--color-purple-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--color-lavender);
+            color: var(--color-purple-dark);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-purple-dark);
+            border-color: var(--color-purple-dark);
+            color: var(--color-white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            color: var(--color-lavender);
+            font-size: 1.125rem;
+        }
+
+        /* Header / Navigation */
+        header {
+            background-color: var(--color-white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(49, 35, 83, 0.03);
+            border-bottom: 1px solid rgba(165, 160, 192, 0.2);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-purple-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--color-lavender);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-purple-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--color-lavender);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 6rem 0;
+            background: linear-gradient(135deg, var(--color-white) 0%, var(--color-bg-light) 100%);
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, var(--color-white), transparent);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(49, 35, 83, 0.06);
+            color: var(--color-purple-dark);
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--color-purple-dark);
+            opacity: 0.85;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* Pillars Section */
+        .pillars {
+            padding: 8rem 0;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background-color: var(--color-white);
+            border: 1px solid rgba(165, 160, 192, 0.2);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-lavender);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pillar-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            background-color: rgba(49, 35, 83, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-purple-dark);
+        }
+
+        .pillar-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pillar-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Framework / Process Section */
+        .framework {
+            padding: 8rem 0;
+            background-color: var(--color-bg-light);
+        }
+
+        .framework-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            gap: 1.5rem;
+        }
+
+        .framework-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background-color: var(--color-lavender);
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .step-card {
+            background: var(--color-white);
+            border-radius: 8px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(165, 160, 192, 0.15);
+        }
+
+        .step-num {
+            width: 45px;
+            height: 45px;
+            background-color: var(--color-purple-dark);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 1.5rem auto;
+            border: 4px solid var(--color-bg-light);
+            box-shadow: 0 0 0 1px var(--color-lavender);
+        }
+
+        .step-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .step-card p {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 8rem 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            border: 1px solid rgba(165, 160, 192, 0.2);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            background-color: var(--color-white);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--color-purple-dark);
+            transform: scale(1.03);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--color-purple-dark);
+            color: var(--color-white);
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-header .desc {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            min-height: 40px;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: var(--color-purple-dark);
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-lavender);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            font-size: 0.925rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(165, 160, 192, 0.1);
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            color: var(--color-purple-dark);
+            font-weight: bold;
+        }
+
+        /* Guarantees Section */
+        .guarantees {
+            padding: 8rem 0;
+            background-color: var(--color-purple-dark);
+            color: var(--color-white);
+        }
+
+        .guarantees .section-header h2 {
+            color: var(--color-white);
+        }
+
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .guarantee-card {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .guarantee-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        .guarantee-card p {
+            color: var(--color-lavender);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 0;
+            background-color: var(--color-bg-light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .parent-brand {
+            background: var(--color-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-purple-dark);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #555;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(49, 35, 83, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-purple-dark);
+            font-weight: bold;
+        }
+
+        .contact-item div p:first-child {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--color-lavender);
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .contact-item div p:last-child {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-purple-dark);
+        }
+
+        .contact-form {
+            background-color: var(--color-white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(165, 160, 192, 0.15);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.85rem;
+            border: 1px solid rgba(165, 160, 192, 0.4);
+            border-radius: 6px;
+            font-size: 1rem;
+            color: var(--color-purple-dark);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-purple-dark);
+            box-shadow: 0 0 0 3px rgba(49, 35, 83, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-purple-dark);
+            color: var(--color-white);
+            padding: 4rem 0 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand {
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        .footer-brand span {
+            color: var(--color-lavender);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            font-size: 0.875rem;
+            color: var(--color-lavender);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .framework-steps {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .framework-steps::before {
+                display: none;
+            }
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero-cta {
+                flex-direction: column;
+            }
+            nav {
+                display: none; /* Can build toggle hamburger menu for mobile */
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Brain<span>SOFT</span></a>
+            <nav>
+                <a href="#pillars">Core Pillars</a>
+                <a href="#framework">Our Framework</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#guarantees">Guarantees</a>
+                <a href="#contact" class="btn btn-outline" style="padding: 0.5rem 1.2rem;">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">The Zero-Shortcut SEO Guide</span>
+                <h1>Dominating Lahore’s Local Search for Page 1 Rankings</h1>
+                <p>No overnight miracles. No black-hat loopholes. Just transparent, data-driven local SEO built to drive actual customer traffic to your Gulberg, DHA, or Johar Town business.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn">Claim Your Place on Page 1</a>
+                    <a href="#pricing" class="btn btn-outline">Explore Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Pillars Section -->
+    <section id="pillars" class="pillars">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Pillars of Search Dominance</h2>
+                <p>A holistic, multi-layered framework designed to build real, lasting search authority.</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">📍</div>
+                    <h3>Local SEO & GBP</h3>
+                    <p>Dominating Google Map Packs across Gulberg, DHA, and Johar Town. We optimize your Google Business Profile (GBP), manage hyper-local reviews, and align local directories.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">⚙️</div>
+                    <h3>Technical & On-Page Architecture</h3>
+                    <p>Optimizing 150+ standard ranking variables. From schema integrations to boosting Core Web Vitals, we make your website as easy for crawler robots to read as humans.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">✍️</div>
+                    <h3>Human-First Content</h3>
+                    <p>Zero AI fluff. We build deep, topical relevance by aligning high-commercial-intent keywords with engaging content written solely to educate and convert your visitors.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🔗</div>
+                    <h3>High-Authority Outreach</h3>
+                    <p>White-hat off-page strategy. We secure niche-relevant guest spots and brand mentions manually, creating clean profiles while proactively disavowing harmful backlinks.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🛒</div>
+                    <h3>E-Commerce Optimization</h3>
+                    <p>Tailored SEO for platforms like Shopify, WooCommerce, Magento, and OpenCart. We scale product visibility, refine category loops, and smooth conversion channels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Framework Section -->
+    <section id="framework" class="framework">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Road to Organic Dominance</h2>
+                <p>A continuous, repeatable pipeline designed to transition your site from discovery to sustainable dominance.</p>
+            </div>
+            <div class="framework-steps">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4>Discovery</h4>
+                    <p>Deep audit of technical site health, profiling key competitor gaps and unearthing valuable keyword opportunities.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4>Strategy</h4>
+                    <p>Aligning strategic keyword mapping directly to your primary business conversion and sales metrics.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4>Execution</h4>
+                    <p>Integrating complex technical enhancements and launching highly engaging, on-page optimization content.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <h4>Authority</h4>
+                    <p>Building strong local trust through structured local citation assets and clean manual outreach initiatives.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">5</div>
+                    <h4>Refinement</h4>
+                    <p>Evaluating rankings performance daily with actionable, weekly reports and strategic refinements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transparent, Value-Focused Pricing</h2>
+                <p>Packages designed for growing startups, regional SMEs, and enterprise operations across Pakistan.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Launch -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Launch</h3>
+                        <p class="desc">Perfect for startups & physical local shops.</p>
+                        <div class="price">PKR 29,999 <span>/mo</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>8 Target Keywords</li>
+                        <li>2 Expert SEO Blogs</li>
+                        <li>10 High-Quality Backlinks</li>
+                        <li>Local Profile Setup</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline select-plan" data-plan="Launch">Select Plan</a>
+                </div>
+                <!-- Growth -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Growth</h3>
+                        <p class="desc">Excellent value for expanding businesses.</p>
+                        <div class="price">PKR 59,999 <span>/mo</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>20 Target Keywords</li>
+                        <li>4 Expert SEO Blogs</li>
+                        <li>20 High-Quality Backlinks</li>
+                        <li>Competitor Analysis</li>
+                        <li>Live Custom Dashboards</li>
+                        <li>WhatsApp Support Desk</li>
+                    </ul>
+                    <a href="#contact" class="btn select-plan" data-plan="Growth">Select Plan</a>
+                </div>
+                <!-- Authority -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Authority</h3>
+                        <p class="desc">For intensely competitive regional niches.</p>
+                        <div class="price">PKR 99,999 <span>/mo</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>40 Target Keywords</li>
+                        <li>8 Blogs + 2 Pillar Posts</li>
+                        <li>30 High-Quality Backlinks</li>
+                        <li>Monthly Technical Audits</li>
+                        <li>Live Custom Dashboards</li>
+                        <li>Dedicated Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline select-plan" data-plan="Authority">Select Plan</a>
+                </div>
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="desc">For large online stores and regional networks.</p>
+                        <div class="price">Custom <span>(PKR 150k+)</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>50+ Custom Keywords</li>
+                        <li>Tailored Content Calendars</li>
+                        <li>Heavy Link Acquisition</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>SLA Performance Guarantees</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline select-plan" data-plan="Enterprise">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantees Section -->
+    <section id="guarantees" class="guarantees">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Three-Fold Risk-Free Guarantee</h2>
+                <p>We hold ourselves accountable to every milestone. If we miss, we make it right.</p>
+            </div>
+            <div class="guarantees-grid">
+                <div class="guarantee-card">
+                    <h3>1. Deliverables Guarantee</h3>
+                    <p>If we fail to deliver a monthly milestone on time, your next full month of campaign execution is absolutely free.</p>
+                </div>
+                <div class="guarantee-card">
+                    <h3>2. Complete Flexibility</h3>
+                    <p>We reject long-term contract locks. For non-enterprise campaigns, we only require a simple 30-day cancellation notice.</p>
+                </div>
+                <div class="guarantee-card">
+                    <h3>3. Performance Commitment</h3>
+                    <p>If you don't notice visible ranking progress in 90 days, we perform a complete structural audit and reset at no cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Ready to Build Real Rankings?</h2>
+                    <p>Book a strategic local analysis session with our engineering team today and identify your competitors' hidden weaknesses.</p>
+                    
+                    <div class="parent-brand">
+                        <strong>BrainSOFT</strong> is a division of <strong>Brain Telecommunication Ltd (BrainTEL)</strong>, پاکستان's telecom and tech pioneer powering businesses since 1982.
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <p>Headquarters</p>
+                                <p>730, Nizam Block, Allama Iqbal Town, Lahore</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <p>Call Us Directly</p>
+                                <p>(042) 111 222 888</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <p>Corporate Email</p>
+                                <p>support@brain.net.pk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="seoForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required placeholder="e.g., Ali Khan">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" required placeholder="e.g., ali@yourbusiness.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website Link</label>
+                            <input type="url" id="website" required placeholder="e.g., www.yourbusiness.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="package">Select Plan</label>
+                            <select id="package">
+                                <option value="General Query">General Strategy Query</option>
+                                <option value="Launch">Launch Plan (PKR 29,999)</option>
+                                <option value="Growth">Growth Plan (PKR 59,999)</option>
+                                <option value="Authority">Authority Plan (PKR 99,999)</option>
+                                <option value="Enterprise">Enterprise Customized Solution</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Schedule Free Analysis</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">Brain<span>SOFT</span></div>
+                <p style="font-size: 0.9rem; color: var(--color-lavender);">Strategic SEO division of Brain Telecommunication Ltd.</p>
+            </div>
+            <p class="copyright">&copy; 1982-2026 Brain Telecommunication Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Automatic Package Selector when clicking Plan buttons
+        const planButtons = document.querySelectorAll('.select-plan');
+        const packageSelect = document.getElementById('package');
+
+        planButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedPlan = button.getAttribute('data-plan');
+                if (packageSelect) {
+                    packageSelect.value = selectedPlan;
+                }
+            });
+        });
+
+        // Form Handling
+        const form = document.getElementById('seoForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const selectedPackage = packageSelect.value;
+            
+            alert(`Thank you, ${name}! Your request for our ${selectedPackage} plan has been received. Our Lahore-based SEO analysts will email you back within 2 business hours.`);
+            form.reset();
+        });
+    </script>
+</body>
+</html>
